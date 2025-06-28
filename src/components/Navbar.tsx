@@ -30,7 +30,7 @@ const Navbar = () => {
   const { setTheme } = useTheme();
   const { toggleSidebar } = useSidebar();
   return (
-    <nav className="py-2 px-4 flex items-center justify-between  sticky top-0  z-20 ">
+    <nav className="py-2 px-4 flex items-center justify-between bg-background  sticky top-0  z-20 border-b-2">
       {/* Right Side  */}
       <div className="flex flex-row gap-2 flex-nowrap items-center">
         <Button

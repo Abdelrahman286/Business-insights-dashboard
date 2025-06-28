@@ -1,11 +1,11 @@
 import { TableHead } from "@/components/ui/table";
 import { flexRender, Header } from "@tanstack/react-table";
-import { User } from "./types";
+import { Project } from "./types";
 
 import { SortAsc, SortDesc } from "lucide-react"; // import SortDesc
 
 interface TableHeaderProps {
-  header: Header<User, unknown>;
+  header: Header<Project, unknown>;
 }
 
 const CustomeTableHeader = ({ header }: TableHeaderProps) => {
@@ -15,7 +15,7 @@ const CustomeTableHeader = ({ header }: TableHeaderProps) => {
 
   return (
     <TableHead>
-      <div className="flex gap-2 cursor-pointer items-center">
+      <div className="flex gap-2 cursor-pointer items-center text-accent-foreground font-extrabold">
         {header.isPlaceholder
           ? null
           : flexRender(header.column.columnDef.header, header.getContext())}

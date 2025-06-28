@@ -14,6 +14,8 @@ import {
 import CustomeTableHeader from "./TableHeader";
 import { cn } from "@/lib/utils";
 
+import ActionControls from "./ActionsBar";
+
 // tanstack imports
 import {
   flexRender,
@@ -31,6 +33,7 @@ import { useTableData } from "./usetableData";
 import { fuzzyFilter } from "./tableUtils";
 import { Input } from "@/components/ui/input";
 import PaginationButtons from "./PaginationBar";
+import SubRow from "./SubRow";
 
 const Page = () => {
   const { data, columns }: any = useTableData();
@@ -58,10 +61,18 @@ const Page = () => {
 
     // Expanding rows
     getRowCanExpand: () => true,
+
+    // intial state
+    initialState: {
+      pagination: {
+        pageSize: 15, // 👈 Change this number to control rows per page
+      },
+    },
   });
 
   return (
     <div className="select-none bg-background border-2 rounded-2xl px-4 py-4">
+      <ActionControls></ActionControls>
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => {
@@ -99,15 +110,8 @@ const Page = () => {
                   })}
                 </TableRow>
                 {row.getIsExpanded() && (
-                  <TableRow>
-                    <TableCell colSpan={table.getVisibleFlatColumns().length}>
-                      <div className="w-full flex flex-col p-4">
-                        <div className="w-20 h-20 p-2 m-2 bg-amber-100">1</div>
-                        <div className="w-20 h-20 p-2 m-2 bg-amber-100">1</div>
-                        <div className="w-20 h-20 p-2 m-2 bg-amber-100">1</div>
-                        <div className="w-20 h-20 p-2 m-2 bg-amber-100">1</div>
-                      </div>
-                    </TableCell>
+                  <TableRow className="hover:bg-background">
+                    <SubRow table={table}></SubRow>
                   </TableRow>
                 )}
               </Fragment>
@@ -115,7 +119,7 @@ const Page = () => {
           })}
         </TableBody>
 
-        <TableFooter>
+        {/* <TableFooter>
           {table.getFooterGroups().map((footerGroup) => {
             return (
               <TableRow key={footerGroup.id}>
@@ -134,7 +138,7 @@ const Page = () => {
               </TableRow>
             );
           })}
-        </TableFooter>
+        </TableFooter> */}
       </Table>
       <PaginationButtons table={table}></PaginationButtons>
     </div>
