@@ -10,7 +10,16 @@ import {
   Projector,
   ChevronDown,
   FolderKanban,
+  User,
+  Bell,
+  FileText,
+  MessageCircle,
+  PieChart,
+  ShoppingCart,
+  CreditCard,
+  HelpCircle,
 } from "lucide-react";
+
 import {
   Sidebar,
   SidebarContent,
@@ -49,6 +58,56 @@ const items = [
     url: "/manage-projects",
     icon: FolderKanban,
   },
+  {
+    title: "Profile",
+    url: "/profile",
+    icon: User,
+  },
+  {
+    title: "Notifications",
+    url: "/notifications",
+    icon: Bell,
+  },
+  {
+    title: "Reports",
+    url: "/reports",
+    icon: FileText,
+  },
+  {
+    title: "Messages",
+    url: "/messages",
+    icon: MessageCircle,
+  },
+  {
+    title: "Analytics",
+    url: "/analytics",
+    icon: PieChart,
+  },
+  {
+    title: "Calendar",
+    url: "/calendar",
+    icon: Calendar,
+  },
+  {
+    title: "Store",
+    url: "/store",
+    icon: ShoppingCart,
+  },
+  {
+    title: "Billing",
+    url: "/billing",
+    icon: CreditCard,
+  },
+  {
+    title: "Settings",
+    url: "/settings",
+    icon: Settings,
+  },
+  {
+    title: "Help",
+    url: "/help",
+    icon: HelpCircle,
+  },
 ];
 
 const AppSidebar = () => {
@@ -59,7 +118,7 @@ const AppSidebar = () => {
           <SidebarMenuItem>
             <SidebarMenuButton asChild>
               <Link href="/">
-                <Image src="/globe.svg" alt="logo" width={20} height={20} />
+                <Image src="/icon.png" alt="logo" width={20} height={20} />
                 <span>Wolf Dashboard</span>
               </Link>
             </SidebarMenuButton>

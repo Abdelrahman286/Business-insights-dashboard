@@ -34,8 +34,8 @@ export const useTableData = () => {
       cell: ({ row }) => (
         <div>
           <Checkbox
-            onChange={row.getToggleSelectedHandler()}
-            checked={row.getIsSelected()}
+            // onChange={row.getToggleSelectedHandler()}
+            // checked={row.getIsSelected()}
             className="size-5  border-accent-foreground"
           ></Checkbox>
         </div>
