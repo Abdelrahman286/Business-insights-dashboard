@@ -2,16 +2,7 @@ import React from "react";
 import type { Table } from "@tanstack/react-table";
 import { TableCell } from "@/components/ui/table";
 
-import {
-  Info,
-  Link,
-  BarChart,
-  Shield,
-  FileQuestion,
-  FileCheck,
-  Users,
-  Filter,
-} from "lucide-react";
+import { Info, BarChart, Shield } from "lucide-react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 

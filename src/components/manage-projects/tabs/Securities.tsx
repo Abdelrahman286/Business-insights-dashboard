@@ -5,17 +5,7 @@ import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Shield,
-  Globe,
-  Smartphone,
-  Tablet,
-  Monitor,
-  Fingerprint,
-  UserX,
-  Link2,
-  GaugeCircle,
-} from "lucide-react";
+import { Shield, Globe, GaugeCircle } from "lucide-react";
 
 type OptionGroup = {
   label: string;

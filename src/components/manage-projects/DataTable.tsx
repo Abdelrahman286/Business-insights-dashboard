@@ -5,8 +5,6 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
-  TableHead,
   TableRow,
   TableHeader,
 } from "@/components/ui/table";
@@ -31,7 +29,6 @@ import { useTableData } from "./usetableData";
 
 // utils
 import { fuzzyFilter } from "./tableUtils";
-import { Input } from "@/components/ui/input";
 import PaginationButtons from "./PaginationBar";
 import SubRow from "./SubRow";
 

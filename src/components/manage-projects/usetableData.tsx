@@ -1,6 +1,5 @@
 "use client";
 import { createColumnHelper } from "@tanstack/react-table";
-import moment from "moment";
 import { useState } from "react";
 import { Projects } from "./data";
 import { Project } from "./types";
@@ -13,7 +12,6 @@ import {
   EyeOff,
   Mail,
   Ellipsis,
-  Trash,
   TrendingDown,
   TrendingUp,
 } from "lucide-react";
