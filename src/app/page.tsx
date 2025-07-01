@@ -20,11 +20,13 @@ const page = () => {
       <div className="bg-primary-foreground p-4 rounded-lg">
         <TodoList></TodoList>
       </div>
-      <div className="bg-primary-foreground p-4 rounded-lg  ">
-        <AppAreaChart></AppAreaChart>
-      </div>
+
       <div className="bg-primary-foreground p-4 rounded-lg ">
         <CardList title="Popular Content"></CardList>
+      </div>
+
+      <div className="bg-primary-foreground p-4 rounded-lg  lg:col-span-2 ">
+        <AppAreaChart></AppAreaChart>
       </div>
     </div>
   );
